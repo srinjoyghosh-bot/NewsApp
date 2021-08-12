@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewsActivity"
+    android:layout_margin="8dp">
+    <ListView
+        android:layout_below="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/news_list"></ListView>
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:focusableInTouchMode="true"
+        >
+        <EditText
+            android:id="@+id/movie_search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/search_button"
+            android:hint="Search"
+            android:textColor="#AEB6BD"></EditText>
+        <ImageButton
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/outline_search_24"
+            android:backgroundTint="@color/search_button"
+            >
+        </ImageButton>
+
+
+
+    </LinearLayout>
+<!--    android:backgroundTint="@color/colorAccent"-->
+    <TextView
+        android:id="@+id/empty_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_screen"
+        android:layout_centerInParent="true"
+       />
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">QuickNewz</string>
+    <string name="empty_screen">Getting Your QuickNewz...</string>
+    <string name="error_search">Please make proper search!</string>
+    <string name="empty_result">No Results Found.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
