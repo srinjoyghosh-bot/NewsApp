@@ -110,10 +110,12 @@ public class IndiaFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 News currentNews=mAdapter.getItem(position);
                 String urlString= currentNews.getWebUrl();
-                Uri newsUri=Uri.parse(urlString);
-                Intent newsIntent=new Intent(Intent.ACTION_VIEW,newsUri);
-                ((Activity)view.getContext()).startActivity(newsIntent);
-                //startActivity(newsIntent);
+                String newsType=currentNews.getSection();
+                Intent intent=new Intent(getContext(),WebViewActivity.class);
+                intent.putExtra("url",urlString);
+                intent.putExtra("section",newsType);
+                startActivity(intent);
+
 
             }
         });
@@ -127,7 +129,7 @@ public class IndiaFragment extends Fragment {
             String jsonResponse=null;
             try {
                 jsonResponse=NetworkUtils.getResponse(url);
-//                newsList=NetworkUtils.getNewsResponse(jsonResponse);
+
 
             } catch (IOException e) {
                 e.printStackTrace();
